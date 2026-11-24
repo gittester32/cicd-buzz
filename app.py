@@ -4,13 +4,13 @@ from buzz import generator
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def generate_buzz():
-    page += "<br>Kaj Boogaard<br>"
-    page = '<html><body><h1>'
+    page = "<html><body><h1>"
     page += generator.generate_buzz()
-    page += '</h1></body></html>'
+    page += "</h1>"
+    page += "<br>Greetings from Kaj Boogaard<br>"
+    page += "</body></html>"
     return page
 
 
